@@ -1,5 +1,5 @@
 :root {
-
+    --mainColor: #4facfe;
 }
 * {
     margin: 0;
@@ -32,8 +32,8 @@ body {
     height: 270px;
     top: 0;
     left: 0;
-    background-image: linear-gradient(to top, #00f2fe, #4facf2);
-    clip-path: circle(400px at 50% -48.5%);
+    background-image: linear-gradient(to top, #12B0E8, var(--mainColor));
+    clip-path: circle(400px at 50% -50%);
 }
 .header {
     position: relative;
@@ -105,7 +105,7 @@ body {
     height: 110px;
     background: url("./img/ProfilePicture.jpg") no-repeat center / cover;
     overflow: hidden;
-    border: 4px solid #00d8fe;
+    border: 4px solid #12B0E8;
     margin-bottom: 2px;
     cursor: pointer;
     border-radius: 50%;
@@ -204,7 +204,7 @@ body {
     transition: 0.3s;
 }
 .icon:hover {
-    color: #4facfe;
+    color: var(--mainColor);
 }
 .buttons-wrap {
     display: flex;
@@ -223,8 +223,8 @@ body {
 .follow {
     padding: 9.6px 0;
     width: 100%;
-    background: linear-gradient(to right, #4facfe 0%, #00f2fe 140%);
-    color: #fff;
+    color: var(--mainColor);
+    border: 2px solid var(--mainColor);
     text-align: center;
     text-decoration: none;
     font-size: 0.8rem;
@@ -233,11 +233,16 @@ body {
     margin-right: 3px;
     border-radius: 20px;
 }
+.follow:hover {
+    background: linear-gradient(to right, var(--mainColor) 0%, #00f2fe 140%);
+    color: #fff;
+    border: none;
+}
 .share {
     padding: 7.6px 0;
     width: 100%;
-    border: 2px solid #4facfe;
-    color: #4facfe;
+    border: 2px solid var(--mainColor);
+    color: var(--mainColor);
     text-align: center;
     text-decoration: none;
     border-radius: 20px;
@@ -245,6 +250,11 @@ body {
     text-transform: uppercase;
     margin-right: 3px;
     font-size: 0.8rem;
+}
+.share:hover {
+    background: linear-gradient(to right, var(--mainColor) 0%, #00f2fe 140%);
+    color: #fff;
+    border: none;
 }
 .modal {
     position: fixed;
